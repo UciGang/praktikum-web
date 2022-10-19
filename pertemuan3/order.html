@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+</head>
+<body bgcolor="lightgrey">
+
+    <!-- nav -->
+    <center>
+    <table border="1" cellspacing="0" cellpadding="8" bgcolor="white">
+            <td>
+                Home | Generate Link | Transaction History | Policy | Logout
+            </td>
+    </table>
+    </center>
+
+<br>
+
+    <form>
+        <table enctype="multipart/form-data" action="post-order.html">
+            <!-- title -->
+            <tr>
+                <td><label for="title">Title Here :</label></td>
+                <td><input type="text" name="title" id="title" placeholder="Write your title here"></td>
+            </tr>
+
+            <td></td>
+
+            <!-- file -->
+            <tr>
+                <td><label for="file">Upload here :</label></td>
+                <td><input type="file" name="" id=""></td>
+            </tr>
+
+            <td></td>
+
+            <!-- desc -->
+            <tr>
+                <td><label for="desc">Description :</label></td>
+                <td><textarea name="desc" id="desc" cols="30" rows="10" placeholder="Write your description here"></textarea></td>
+            </tr>
+
+            <td></td>
+
+            <!-- acc num -->
+            <tr>
+                <td><label for="accnum">Account Number :</label></td>
+                <td><input type="number" name="accnum" id="accnum" placeholder="000-111-222"></td>
+            </tr>
+
+            <td></td>
+
+            <!-- bank -->
+            <tr>
+                <td><label for="bank">Bank :</label></td>
+                <td><select name="bank" id="bank">
+                    <option value="BNI">BNI</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BRI">BRI</option>
+                </select></td>
+            </tr>
+
+            <td></td>
+
+            <!-- acc hold -->
+            <tr>
+                <td><label for="acchold">Account Holder :</label></td>
+                <td><input type="text" name="acchold" id="acchold" placeholder="Your Name"></td>
+            </tr>
+
+            <td></td>
+
+            <!-- transaction -->
+            <tr>
+                <td><label for="tra">Transaction :</label></td>
+                <td><select name="tra" id="tra">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    </select>
+                </td>
+                <td><h6>* if the transaction is for 3 person, choose from the drop-down list</h6></td>
+            </tr>
+
+            <td></td>
+
+            <!-- check -->
+            <tr>
+                <td><input type="checkbox" name="cek" id="phone" value="Phone"></td>
+                <td><label for="phone">Send to Mobile Phone</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cek" id="email" value="email"></td>
+                <td><label for="email">Send to email</label></td>
+            </tr>
+
+            <td></td>
+
+            <!-- phone -->
+            <tr>
+                <td><label for="phonenum">Send to Mobile Phone :</label></td>
+                <td><input type="number" name="phonenum" id="phonenum" placeholder="08xx-xxxx-xxxx"></td>
+            </tr>
+
+            <td></td>
+
+            <!-- email -->
+            <tr>
+                <td><label for="mail">Send to Email</label></td>
+                <td><input type="text" name="mail" id="mail" placeholder="xxx@xxx.com"></td>
+            </tr>
+
+            <td></td>
+
+            <!-- button -->
+            <tr>
+                <td><input type="submit" value="Generate Link"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
