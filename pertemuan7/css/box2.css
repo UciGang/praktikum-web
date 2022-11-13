@@ -1,0 +1,34 @@
+.topbox{
+    width: 100%;
+    height: 100px;
+    background-color: #aedd94;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* box pertama dari setiap container */
+.container .box:nth-child(1){
+    background-color: #f4eb49;
+    width: 10%;
+}
+
+/* box kedua dari setiap container */
+.container .box:nth-child(2){
+    width: 89%;
+}
+
+.box{
+    height: 150px;
+}
+
+.bg-orange{
+    background-color: #f76424;
+}
+
+.bg-blue{
+    background-color: #4dd7fa;
+}

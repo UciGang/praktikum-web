@@ -1,0 +1,44 @@
+.kontener{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1{
+    width: 20%;
+    background-color: #f00;
+    height: 150px;
+}
+
+.box2{
+    width: 79%;
+    background-color: orange;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.mbox1{
+    height: 500px;
+    width: 20%;
+    background-color: #ff0;
+}
+
+.mbox2{
+    width: 58%;
+    background-color: #0f0;
+}
+
+.mbox3{
+    width: 20%;
+    background-color: #00f;
+}
+
+.botbox{
+    margin-top: 5px;
+    width: 100%;
+    background-color: #f0f;
+    height: 100px;
+}
