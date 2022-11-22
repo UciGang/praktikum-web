@@ -18,7 +18,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+    border: 1px #00f;
 }
+/*  hihi*/
 
 .mbox1{
     height: 500px;

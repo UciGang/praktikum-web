@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+}
+
+img{
+    height: 11vw;
+    flex-grow: 1;
+    border: 1px solid grey;
+}
