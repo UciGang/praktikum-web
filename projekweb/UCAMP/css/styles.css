@@ -7952,9 +7952,10 @@ textarea.form-control-lg {
   color: #6c757d !important;
 }
 
-.text-black-50 {
+.text-black-50 li {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
+  list-style-type: none;
 }
 
 .text-white-50 {
