@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Jam Parkir</title>
+</head>
+<body>
+    <h1>Hitung Jam Parkir</h1>
+
+    <label for="jmasuk">Jam Masuk : </label>
+    <input type="number" id="jmasuk">
+
+    <label for="jkeluar">Jam Keluar : </label>
+    <input type="number" id="jkeluar">
+    
+    <button>Hitung !</button>
+
+    <p>Durasi : <span id="duration">0</span> Jam</p>
+    <p>Biaya : Rp. <span id="cost">0</span></p>
+
+    <script>
+       
+        let btn = document.getElementsByTagName('button')[0];
+
+
+        btn.addEventListener('click', function(){
+            let jmasuk = document.getElementById('jmasuk').value;
+            let jkeluar = document.getElementById('jkeluar').value;
+            let duration = document.getElementById('duration');
+            let cost = document.getElementById('cost');
+            let interval = jkeluar - jmasuk
+            duration.innerHTML = interval;
+            
+            if(interval < 3){
+                cost.innerHTML = 3000
+            } else {
+                cost.innerHTML = 3000 + (interval - 2) * 1000
+            }
+        })
+    </script>
+</body>
+</html>
