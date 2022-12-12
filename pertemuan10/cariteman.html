@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Teman</title>
+</head>
+<body>
+    <label for="nama">Cari Siswa : </label>
+    <input type="text" id="nama">
+    <button onclick="cariteman()">Kuy!</button>
+
+    <hr>
+
+    <div style="border: 20px solid green; padding: 10px; width: 50%;">
+        <p>Nama yang dicari: <span id="temen"></span></p>
+    </div>
+
+    <script>
+        function cariteman(){
+            let nama = document.getElementById('nama').value;
+            let temen = document.getElementById('temen');
+
+            temen.innerHTML = nama;
+            if(nama == 'ahmad'){
+                console.log('Ahmad Niich!');
+                temen.style = "color: #00f;"
+            } else {
+                console.log('Ahmad mana yaak?');
+                temen.style = "color : #f00;"
+            }
+        }
+    </script>
+</body>
+</html>

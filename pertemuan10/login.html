@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Tiba-Tiba Login</h1>
+
+    <label for="username">Username : </label><br>
+    <input type="text" id="username">
+    <br>
+    <label for="pw">Password : </label><br>
+    <input type="password" id="pw">
+
+    <button onclick="login()">Login</button>
+
+    <script>
+        function login(){
+            let username = document.getElementById('username').value;
+            let pw = document.getElementById('pw').value;
+
+            if (username == 'ahmad2017' && pw == 'integrity'){
+                alert('kamu berhasil login')
+                window.location = 'loginsukses.html';
+            } else {
+                alert('yaaah username / password kamu salah')
+            }
+        }
+    </script>
+    
+</body>
+</html>

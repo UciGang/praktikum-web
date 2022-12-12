@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uci Airlines</title>
+</head>
+<body>
+    <h1>Welcome to Uci Airlines</h1>
+    <h2>Please Validate Your Data</h2>
+    <form onsubmit="return false">
+        <!-- nama -->
+        <label for="nama">Nama Pelanggan : </label><br>
+        <input type="text" id="nama" maxlength="30" required="">
+        <span id="namaSalah"></span>
+
+        <br>
+
+        <!-- email -->
+        <label for="email">Email : </label><br>
+        <input type="email" id="email" required="">
+        <span id="emailSalah"></span>
+
+        <br>
+        <!-- jam berangkat -->
+        <label for="jamber">Jam Keberangkatan : </label><br>
+        <input type="time" id="jamber" required="">
+        <span id="waktuSalah"></span>
+
+        <br>
+        <!-- tujuan -->
+        <label for="tujuan">Tujuan Keberangkatan : </label><br>
+        <input type="text" id="tujuan" required="">
+        <span id="tujuanSalah"></span>
+
+        <br>
+        <!-- jumlah tiket -->
+        <label for="jtiket">Jumlah Tiket : </label><br>
+        <select id="jtiket">
+            <option value="">Jumlah Tiket</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <span id="tiketSalah"></span>
+
+        <button onclick="validate()">Validate!</button>
+        <button onclick="window.location.reload()">Reset!</button>
+    </form>
+
+    <h1 id="hasil"></h1>
+    <p id="hasilNama"></p>
+    <p id="hasilEmail"></p>
+    <p id="hasilJam"></p>
+    <p id="hasilTujuan"></p>
+    <p id="hasilTiket"></p>
+
+    <script>
+        function validate(){
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jamber = document.getElementById('jamber').value;
+            let tujuan = document.getElementById('tujuan').value;
+            let jtiket = document.getElementById('jtiket').value;
+
+            
+            if (nama == ''){ //nama
+                document.getElementById('namaSalah').innerHTML = 'Nama Tidak Valid!';
+                document.getElementById('namaSalah').style = 'color:#f00';
+            }
+            if (email == ''){ //email
+                document.getElementById('emailSalah').innerHTML = 'Email Tidak Valid!';
+                document.getElementById('emailSalah').style = 'color:#f00';
+            }
+            if (jamber == ''){ //waktu
+                document.getElementById('waktuSalah').innerHTML = 'Waktu Tidak Valid!';
+                document.getElementById('waktuSalah').style = 'color:#f00';
+            }
+            if (tujuan == ''){ //tujuan
+                document.getElementById('tujuanSalah').innerHTML = 'Tujuan Tidak Valid!';
+                document.getElementById('tujuanSalah').style = 'color:#f00';
+            }
+            if (jtiket == ''){ //tiket
+                document.getElementById('tiketSalah').innerHTML = 'Jumlah Tiket Tidak Valid!';
+                document.getElementById('tiketSalah').style = 'color:#f00';
+            }
+            else { //berhasil
+                document.getElementById('hasil').innerHTML = "Validation Succes!";
+                document.getElementById('hasilNama').innerHTML = "Nama Pelanggan : " + nama;
+                document.getElementById('hasilEmail').innerHTML = "Email Pelanggan : " + email;
+                document.getElementById('hasilJam').innerHTML = "Jam : " + jamber;
+                document.getElementById('hasilTujuan').innerHTML = "Tujuan : " + tujuan;
+                document.getElementById('hasilTiket').innerHTML = "Jumlah Tiket : " + jtiket;
+            }
+        }
+    </script>
+</body>
+</html>

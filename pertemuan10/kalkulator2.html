@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator 2.0</title>
+</head>
+<body>
+    <h1>Kalkulator BaKaTaKur</h1>
+
+    <label for="a">Masukkan bilangan 1: </label>
+    <input type="number" id="a">
+    <br>
+    <label for="b">Masukkan bilangan 2: </label>
+    <input type="number" id="b">
+
+    <br>
+
+    <label>Pilih operasi aritmatika : </label>
+    <input type="radio" name="operasi" value="tambah"> +
+    <input type="radio" name="operasi" value="kurang"> -
+    <input type="radio" name="operasi" value="kali"> x
+    <input type="radio" name="operasi" value="bagi"> ÷
+
+    <br>
+
+    <button onclick="calculate()">Hitung</button>
+
+    <p>Hasil = <span id="hasil">0</span></p>
+
+    <script>
+        function calculate(){
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let hasil = document.getElementById('hasil');
+        let operasi = document.querySelector('input[name="operasi"]:checked').value;
+
+        switch (operasi) {
+            case 'tambah':
+                hasil.innerHTML = a + b;
+                break;
+                
+            case 'kurang':
+                hasil.innerHTML = a - b;
+                break;
+
+            case 'kali':
+                hasil.innerHTML = a * b;
+                break;
+
+            default:
+                hasil.innerHTML = a / b;
+                break;
+        }
+        }
+    </script>
+</body>
+</html>
