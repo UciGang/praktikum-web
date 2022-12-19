@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Chat Box</legend>
+        <section>
+            <div id="textBox">
+                <strong><p>Chat Box</p></strong>
+                <hr>
+            </div>
+            <div class="floating">
+                <input id="inputText" type="text">
+                <button type="button" onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </fieldset>
+
+
+    <script>
+        function sendMessage() {
+            let teks = document.getElementById("inputText").value;
+            let paragraf = document.createElement("P");
+            
+            paragraf.innerHTML = String(teks);
+            document.getElementById("textBox").appendChild(paragraf).style.margin="10px";
+        }
+    </script>
+</body>
+</html>
